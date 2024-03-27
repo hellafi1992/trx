@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alarm-clock">
+        <div class="time">
+            <h1 class="txt-1">PRESS</h1>
+            <h1 class="txt-2">R T X</h1>
+            <div class="times">
+            <span class="hours">12</span>
+            <span class="colon">:</span>
+            <span class="minutes">00</span>
+            <span class="colon">:</span>
+            <span class="seconds">30</span>
+        </div>
+        </div>
+    </div>
+</body>
+
+///
+
+<body>
+    <div class="home-border">
+        <video src="1.mp4" controls poster="tvv.png" preload="metadata" autoplay></video>
+    </div>
+</body>
+<script>
+    const $ = (Selector) => {
+        return document.querySelector(Selector);
+    }
+    const hours = $('.hours');
+    const minutes = $('.minutes');
+    const seconds = $('.seconds');
+    
+    const month = $('.month');
+    const day = $('.day');
+    const year = $('.year');
+    
+    function setDate() {
+        const now = new Date();
+        const mm = now.getMonth();
+        const dd = now.getDate();
+        const yy = now.getFullYear();
+        const secs = now.getSeconds();
+        const mins = now.getMinutes();
+        const hrs = now.getHours();
+        const monthName = [
+            'يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'
+        ];
+        
+        if (hrs > 12) {
+            hours.innerHTML = hrs - 12;
+        }
+        else {
+            hours.innerHTML = hrs;
+        }
+    
+        seconds.innerHTML = String(secs)
+        .padStart(2, '0');
+        minutes.innerHTML = String(mins)
+        .padStart(2, '0');
+        month.innerHTML = monthName[mm];
+        day.innerHTML = dd;
+        year.innerHTML = yy;
+    }
+    
+    setInterval(setDate, 1000);
+</script>
+</html>

@@ -1,0 +1,61 @@
+*{
+    background: black;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    translate: 0px 120px;
+}
+
+.txt-1{
+    background: none;
+    color: red;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation: h11 3s linear infinite;
+}
+
+@keyframes h11 {
+    from{
+        filter: hue-rotate(990deg);
+    }
+    to{
+        text-shadow: 10px 0 10px 20px red;
+    }
+}
+
+.txt-2{
+    background: none;
+    color: rgb(8, 142, 245);
+    font-size: 70px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: h11 3s linear infinite;
+}
+
+.alarm-clock{
+    translate: 0px -100px;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(212, 160, 160);
+}
+
+
+
+
+
+/*__..567u8u8 p7unt5by 589 5845wpw45upyp45uyuwyp*/
+
+
+video{
+    background: none;
+    border-radius: 30px;
+    translate: 130px -30px;
+    width: 1020px;
+    height: 480px;
+}
